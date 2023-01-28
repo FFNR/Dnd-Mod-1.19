@@ -1,3 +1,6 @@
 {
-  "item.dndmod.steel": "Steel"
+  "item.dndmod.steel": "Steel",
+
+  "key.category.dndmod.dnd": "Dnd Mod",
+  "key.dndmod.main_ui": "Main UI Key"
 }
