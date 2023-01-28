@@ -1,6 +1,7 @@
 package net.ffnr.dndmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.ffnr.dndmod.items.DndItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,7 +10,8 @@ public class DndMod implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
-	public void onInitialize() {
-
+	public void onInitialize()
+	{
+		DndItems.registerModItems();
 	}
 }
