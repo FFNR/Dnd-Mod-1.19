@@ -2,6 +2,7 @@ package net.ffnr.dndmod.event;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.ffnr.dndmod.dnd.Character;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
@@ -17,7 +18,9 @@ public class KeyInputHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (main_ui.wasPressed())
             {
-                client.player.sendMessage(Text.of("Test"));
+                int x = Character.getExperience();
+
+                client.player.sendMessage(Text.of(Integer.toString(x)));
             }
         });
     }
