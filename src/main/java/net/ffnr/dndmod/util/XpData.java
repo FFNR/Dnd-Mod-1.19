@@ -26,4 +26,10 @@ public class XpData {
         nbt.putInt("xp", xp);
         return xp;
     }
+    public static int clearExperience(IEntityDataSaver player)
+    {
+        NbtCompound nbt = player.getPersistentData();
+        nbt.putInt("xp", 0);
+        return 0;
+    }
 }
