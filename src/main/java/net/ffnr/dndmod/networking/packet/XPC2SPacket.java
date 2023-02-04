@@ -28,6 +28,7 @@ public class XPC2SPacket {
         if(OnDeathEntityHandler.getKilledPasive()) {
             XpData.addExperience(((IEntityDataSaver) player), 10);
             player.sendMessage(Text.literal("XP Total: " + (XpData.getExperience(((IEntityDataSaver) player)))));
+            XpData.checkForLevelUp((IEntityDataSaver) player);
         }
 
 
